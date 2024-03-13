@@ -1,22 +1,20 @@
 def main():
-    try:
-        x = int(input("Ingresa el primer número: "))
-        y = int(input("Ingresa el segundo número: "))
-        z = int(input("Ingresa el tercer número: "))
-        
-        if x >= y:
-            if x >= z:
-                print(x)
-            else:
-                print(z)
+    x = int(input("Ingresa el primer número: "))
+    y = int(input("Ingresa el segundo número: "))
+    z = int(input("Ingresa el tercer número: "))
+    
+    if x >= y:
+        if x >= z:
+            print(x)
         else:
-            if y >= z:
-                print(y)
-            else:
-                print(z)
-    except ValueError:
-        print("Por favor, ingresa solo números enteros.")
+            print(z)
+    else:
+        if y >= z:
+            print(y)
+        else:
+            print(z)
 
 if __name__ == "__main__":
     main()
+
 
