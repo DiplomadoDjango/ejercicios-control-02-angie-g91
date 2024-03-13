@@ -1,9 +1,25 @@
 
-def main():
-    pass
-    # Escribe el código adecuado para completar el programa
-    # Para pedir el dato de la idetificación oficial emplea este mensaje:
-    # "¿Tienes identificación oficial? (s/n): "
+import math
 
-if __name__ == '__main__':
+def main():
+    try:
+        edad = int(input("Ingresa tu edad: "))
+        if edad < 0:
+            print("No cumples requisitos")
+            return
+        
+        identificacion = input("¿Tienes identificación oficial? (s/n): ")
+        if identificacion.lower() == 's':
+            if edad >= 18:
+                print("Trámite de licencia concedido")
+            else:
+                print("No cumples requisitos")
+        elif identificacion.lower() == 'n':
+            print("No cumples requisitos")
+        else:
+            print("Respuesta incorrecta")
+    except ValueError:
+        print("No cumples requisitos")
+
+if __name__ == "__main__":
     main()
